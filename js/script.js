@@ -1,12 +1,12 @@
 (function() {
     let currentNumber = 1;
     const colors = [
-        'red', 'orange', 'yellow', 'green', 'skyblue', 'blue', 'purple', 'brown', 'gray', 'black',
-        'pink'
+        'red', 'orangered', 'yellow', 'green', 'deepskyblue', 'mediumblue', 'blueviolet', 'peru', 'gray', 'black',
+        'deeppink'
     ];
     const rightChoices = {
-        0: 'black', 1: 'red', 2: 'blue', 3: 'yellow', 4: 'green',
-        5: 'pink', 6: 'orange', 7: 'purple', 8: 'brown', 9: 'gray'
+        0: 'black', 1: 'red', 2: 'mediumblue', 3: 'yellow', 4: 'green',
+        5: 'deeppink', 6: 'orangered', 7: 'blueviolet', 8: 'peru', 9: 'gray'
     };
 
     const successSound = new Audio('audio/success.ogg');
@@ -14,7 +14,7 @@
     let changing = false;
 
     const numberSpan = document.getElementById('number');
-    const colorButtons = document.querySelectorAll('#colors .color');
+    const colorButtons = document.querySelectorAll('.color');
 
     colorButtons.forEach(function(button) {
         if (changing) {
