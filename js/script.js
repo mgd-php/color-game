@@ -1,12 +1,12 @@
 (function() {
     let currentNumber = 1;
     const colors = [
-        'red', 'orangered', 'yellow', 'green', 'deepskyblue', 'mediumblue', 'blueviolet', 'peru', 'gray', 'black',
+        'red', 'orange', 'yellow', 'green', 'deepskyblue', 'mediumblue', 'blueviolet', 'peru', 'gray', 'black',
         'deeppink'
     ];
     const rightChoices = {
         0: 'black', 1: 'red', 2: 'mediumblue', 3: 'yellow', 4: 'green',
-        5: 'deeppink', 6: 'orangered', 7: 'blueviolet', 8: 'peru', 9: 'gray'
+        5: 'deeppink', 6: 'orange', 7: 'blueviolet', 8: 'peru', 9: 'gray'
     };
 
     const successSound = new Audio('audio/success.ogg');

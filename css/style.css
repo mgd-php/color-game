@@ -5,14 +5,14 @@ body {
     margin: 0;
 }
 #container {
-    background-color: #333;
+    background-color: white;
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 98%;
+    height: 99%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 5fr 1fr;
-    grid-gap: 5px;
+    grid-gap: 1%;
+    margin: 1%;
 }
 
 #number-container {
@@ -24,7 +24,6 @@ body {
 }
 
 #number {
-    font-size: 40vw;
     font-weight: bolder;
     font-family: sans-serif;
     -webkit-text-stroke-width: 1vw;
@@ -32,8 +31,25 @@ body {
     transition:all 500ms ease;
 }
 
-#colors .color {
-    width: 32%;
-    height: 17vw;
+.color {
     cursor: pointer;
+    border-radius: 20%;
+}
+
+@media (orientation: landscape) {
+    #container {
+        grid-template-rows: 4fr 1fr;
+    }
+    #number {
+        font-size: 60vh;
+    }
+}
+
+@media (orientation: portrait) {
+    #container {
+        grid-template-rows: 5fr 1fr;
+    }
+    #number {
+        font-size: 80vw;
+    }
 }
