@@ -10,14 +10,13 @@ body {
     width: 98%;
     height: 99%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     grid-gap: 1%;
     margin: 1%;
 }
 
 #number-container {
     background: white;
-    grid-column: span 3;
+    grid-column: span 1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -31,6 +30,11 @@ body {
     transition:all 500ms ease;
 }
 
+#colors {
+    display: flex;
+    justify-content: space-between;
+}
+
 .color {
     cursor: pointer;
     border-radius: 20%;
@@ -38,18 +42,34 @@ body {
 
 @media (orientation: landscape) {
     #container {
-        grid-template-rows: 4fr 1fr;
+        grid-template-columns: 6fr 2fr;
+        grid-template-rows: 1fr;
+    }
+    #number-container {
     }
     #number {
         font-size: 60vh;
+    }
+    #colors {
+        flex-direction: column;
+    }
+    .color {
+        height: 33%;
     }
 }
 
 @media (orientation: portrait) {
     #container {
         grid-template-rows: 5fr 1fr;
+        grid-template-columns: 1fr;
     }
     #number {
         font-size: 80vw;
+    }
+    #colors {
+        flex-direction: row;
+    }
+    .color {
+        width: 33%;
     }
 }
